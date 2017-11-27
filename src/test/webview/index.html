@@ -1,0 +1,30 @@
+<html>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+   <b>input the name</b><br>
+   <!--<h1 id="elementId">{{name}}</h1> -->
+     <table class="table table-hover recent-foleder-table">
+          <thead class="thead-inverse">
+            <tr>    
+              <th></th>
+              <th></th>
+              <th class="recent-foleder-col-header">LAST OPENED</th>
+            </tr>
+            <tbody>
+              <tr id="recent-folder-row" ng-repeat="item in recentItems() track by $index">
+                <th scope="row" class="col-md-3 recent-folder-type">{{ item.sessionTypeName }}</th>
+                <td>
+                  <p class="recent-folder-name">{{ item.sessionName }}</p>
+                  <p class="recent-folder-path">{{ item.sessionPath }}</p>
+                </td>
+              </tr>  
+            </tbody>
+          </thead>
+        </table>
+</div>
+<script type="text/javascript" src="./angular.min.js"></script>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript" src="./app.js"></script>
+<script type="text/javascript" src="./controller.js"></script>
+</body>
+</html>
